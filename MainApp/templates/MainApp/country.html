@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страны</title>
+</head>
+<body>
+{% for L in Alfavit %}
+        <a href="/countryList/{{L}}">{{L}}</a>
+{% endfor %}
+<div class="container">
+      <h1 style="margin-top: 10px;">Страны</h1>
+<a href="http://127.0.0.1:8000">На Главную</a>
+      <hr>
+
+      <ul class="list-group list-group-flush">
+        {% for employee in page_obj %}
+          <ol>
+              <a href="/country/{{employee}}" class="list-group-item">{{ employee }}</a>
+          </ol>
+        {% endfor %}
+      </ul>
+
+      <br><hr>
+
+     {% include "./pagination.html" %}
+</div>
+<h2>Список стран:</h2>
+<ol>
+{% for L in ListC %}
+    <li>
+        <a href="/countryList/{{L}}">{{L}}</a>
+    </li>
+{% endfor %}
+</ol>
+</body>
+</html>

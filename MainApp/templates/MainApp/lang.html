@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Языки</title>
+</head>
+<body>
+<h2>Список языков:</h2>
+<a href="http://127.0.0.1:8000">На Главную</a>
+<ol>
+{% for K in ListL %}
+    <li>
+        <a href="/lang/{{K}}">{{K}}</a>
+    </li>
+{% endfor %}
+</ol>
+</body>
+</html>

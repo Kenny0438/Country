@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{country}}</title>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/countryList">К странам</a>
+<h3>{{country}}</h3>
+<ol>
+{% for L in languages %}
+    <li>
+        <p>{{L}}</p>
+    </li>
+{% endfor %}
+</ol>
+</body>
+</html>
